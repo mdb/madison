@@ -12,11 +12,11 @@ for (var i=0; i<states.length; i++) {
 exports.states = states;
 
 exports.getStateAbbrev = function (stateName) {
-  var stateNameLower = stateName.toLowerCase();
+  var stateNameLower = typeof stateName === 'string' ? stateName.toLowerCase() : undefined;
   return stateAbbrevs[stateNameLower];
 };
 
 exports.getStateName = function (stateAbbrev) {
-  var stateAbbr = stateAbbrev.toLowerCase();
+  var stateAbbr = typeof stateAbbrev === 'string' ? stateAbbrev.toLowerCase() : undefined;
   return stateNames[stateAbbr];
 };

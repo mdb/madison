@@ -16,8 +16,17 @@ describe("madison", function() {
     });
 
     it("returns undefined in the event that it is not passed a valid state name", function () {
-      assert(madison.getStateName('Some Fake State') === undefined);
-      assert(madison.getStateName('Another Fake State') === undefined);
+      assert(madison.getStateAbbrev('Some Fake State') === undefined);
+      assert(madison.getStateAbbrev('Another Fake State') === undefined);
+    });
+    
+    it("returns undefined in the event that it is passed a non-string value", function () {
+      assert(madison.getStateAbbrev(undefined) === undefined);
+      assert(madison.getStateAbbrev(false) === undefined);
+      assert(madison.getStateAbbrev(333) === undefined);
+      assert(madison.getStateAbbrev({}) === undefined);
+      assert(madison.getStateAbbrev(null) === undefined);
+      assert(madison.getStateAbbrev([]) === undefined);
     });
   })
 
@@ -35,6 +44,15 @@ describe("madison", function() {
     it("returns undefined in the event that it is not passed a valid state abbreviation", function () {
       assert(madison.getStateName('XX') === undefined);
       assert(madison.getStateName('00') === undefined);
+    });
+
+    it("returns undefined in the event that it is passed a non-string value", function () {
+      assert(madison.getStateName(undefined) === undefined);
+      assert(madison.getStateName(false) === undefined);
+      assert(madison.getStateName(333) === undefined);
+      assert(madison.getStateName({}) === undefined);
+      assert(madison.getStateName(null) === undefined);
+      assert(madison.getStateName([]) === undefined);
     });
   });
 });
