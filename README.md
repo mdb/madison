@@ -9,6 +9,8 @@ A dirt simple Node.js module for working with US state names and abbreviations.
     npm install madison
 
 ## Getting Started
+
+Require madison:
   
     var madison = require('madison');
 
