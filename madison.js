@@ -1,37 +1,22 @@
 var fs = require('fs');
+var stateAbbrevs = {};
+var stateNames = {};
+var states = JSON.parse(fs.readFileSync('states.json'));
 
-exports.states = function () {
-  return JSON.parse(fs.readFileSync('states.json'));
-};
+// build map
+for (var i=0; i<states.length; i++) {
+  stateAbbrevs[states[i].name.toLowerCase()] = states[i].abbr;
+  stateNames[states[i].abbr.toLowerCase()] = states[i].name;
+}
+
+exports.states = states;
 
 exports.getStateAbbrev = function (stateName) {
-  var states = exports.states();
-  var statesLength = exports.states().length;
-  var i;
-  var abbrev;
-  
-  for (i=0; i<statesLength; i++) {
-    if(states[i].name.toLowerCase() === stateName.toLowerCase()) {
-      abbrev = states[i].abbr;
-      break;
-    }
-  }
-
-  return abbrev;
+  var stateNameLower = stateName.toLowerCase();
+  return stateAbbrevs[stateNameLower];
 };
 
 exports.getStateName = function (stateAbbrev) {
-  var states = exports.states();
-  var statesLength = exports.states().length;
-  var i;
-  var name;
-  
-  for (i=0; i<statesLength; i++) {
-    if(states[i].abbr.toLowerCase() === stateAbbrev.toLowerCase()) {
-      name = states[i].name;
-      break;
-    }
-  }
-
-  return name;
+  var stateAbbr = stateAbbrev.toLowerCase();
+  return stateNames[stateAbbr];
 };
