@@ -1,7 +1,7 @@
 var fs = require('fs');
 var stateAbbrevs = {};
 var stateNames = {};
-var states = JSON.parse(fs.readFileSync('states.json'));
+var states = JSON.parse(fs.readFileSync('./states.json'));
 
 // build map
 for (var i=0; i<states.length; i++) {
