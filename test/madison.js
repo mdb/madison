@@ -55,4 +55,12 @@ describe("madison", function() {
       assert(madison.getStateName([]) === undefined);
     });
   });
+
+  describe("#states", function () {
+    it("returns a JSON array of objects, each of which contains a 'name' and 'abbr' key", function () {
+      assert(madison.states.length === 51);
+      assert(madison.states[0].name === "Alabama");
+      assert(madison.states[0].abbr === "AL");
+    });
+  });
 });
