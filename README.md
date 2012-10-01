@@ -16,11 +16,11 @@ Require madison:
 
 Get a state's abbreviation:
 
-    madison.getStateAbbrev('virginia');
+    madison.getStateAbbrev('virginia'); //returns 'VA'
 
 Get a state's name:
 
-    madison.getStateName('va');
+    madison.getStateName('va'); //returns 'Virginia'
 
 Get a JSON array of US states, each containing 'name' and 'abbr' properties:
 
