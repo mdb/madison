@@ -14,6 +14,11 @@ describe("madison", function() {
       assert(madison.getStateAbbrev('West virginia') === 'WV');
       assert(madison.getStateAbbrev('californIA') === 'CA');
     });
+
+    it("returns undefined in the event that it is not passed a valid state name", function () {
+      assert(madison.getStateName('Some Fake State') === undefined);
+      assert(madison.getStateName('Another Fake State') === undefined);
+    });
   })
 
   describe("#getStateName", function () {
@@ -25,6 +30,11 @@ describe("madison", function() {
     it("returns a state's name when it's passed a state's abbreviation, independent of case", function () {
       assert(madison.getStateName('VA') === 'Virginia');
       assert(madison.getStateName('cA') === 'California');
+    });
+
+    it("returns undefined in the event that it is not passed a valid state abbreviation", function () {
+      assert(madison.getStateName('XX') === undefined);
+      assert(madison.getStateName('00') === undefined);
     });
   });
 });
