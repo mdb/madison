@@ -1,4 +1,3 @@
-var fs = require('fs');
 var states = require('./states.json');
 var stateAbbrevs = {};
 var stateNames = {};
