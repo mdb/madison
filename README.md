@@ -18,13 +18,21 @@ Get a state's abbreviation asynchronously:
 
     madison.getStateAbbrev('virginia', function (abbrev) {
       console.log(abbrev); //'VA'
-    }); 
+    });
+
+Get a state's abbreviation synchronously:
+
+    madison.getStateAbbrevSync('virginia'); //returns 'VA'
 
 Get a state's name asynchronously:
 
     madison.getStateName('va', function (name) {
       console.log(name); //'Virginia'
     });
+
+Get a state's name synchronously:
+
+    madison.getStateNameSync('va'); //returns 'Virgini'
 
 Get a JSON array of US states, each containing 'name' and 'abbr' properties:
 
