@@ -11,21 +11,27 @@ for (var i=0; i<states.length; i++) {
 exports.states = states;
 
 exports.getStateAbbrev = function (stateName, callback) {
-  var stateNameLower = typeof stateName === 'string' ? stateName.toLowerCase() : undefined;
+  var stateNameLower = setNameOrAbbrevVar(stateName);
   callback(stateAbbrevs[stateNameLower]);
 };
 
 exports.getStateAbbrevSync = function (stateName) {
-  var stateNameLower = typeof stateName === 'string' ? stateName.toLowerCase() : undefined;
+  var stateNameLower = setNameOrAbbrevVar(stateName);
   return stateAbbrevs[stateNameLower];
 };
 
 exports.getStateName = function (stateAbbrev, callback) {
-  var stateAbbr = typeof stateAbbrev === 'string' ? stateAbbrev.toLowerCase() : undefined;
+  var stateAbbr = setNameOrAbbrevVar(stateAbbrev);
   callback(stateNames[stateAbbr]);
 };
 
 exports.getStateNameSync = function (stateAbbrev) {
-  var stateAbbr = typeof stateAbbrev === 'string' ? stateAbbrev.toLowerCase() : undefined;
+  var stateAbbr = setNameOrAbbrevVar(stateAbbrev);
   return stateNames[stateAbbr];
 };
+
+// helpers
+function setNameOrAbbrevVar(stateNameOrAbbrev) {
+  var nameOrAbbrev = typeof stateNameOrAbbrev === 'string' ? stateNameOrAbbrev.toLowerCase() : undefined;
+  return nameOrAbbrev;
+}
