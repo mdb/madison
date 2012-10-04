@@ -15,7 +15,17 @@ exports.getStateAbbrev = function (stateName, callback) {
   callback(stateAbbrevs[stateNameLower]);
 };
 
+exports.getStateAbbrevSync = function (stateName) {
+  var stateNameLower = typeof stateName === 'string' ? stateName.toLowerCase() : undefined;
+  return stateAbbrevs[stateNameLower];
+};
+
 exports.getStateName = function (stateAbbrev, callback) {
   var stateAbbr = typeof stateAbbrev === 'string' ? stateAbbrev.toLowerCase() : undefined;
   callback(stateNames[stateAbbr]);
+};
+
+exports.getStateNameSync = function (stateAbbrev) {
+  var stateAbbr = typeof stateAbbrev === 'string' ? stateAbbrev.toLowerCase() : undefined;
+  return stateNames[stateAbbr];
 };
