@@ -10,12 +10,12 @@ for (var i=0; i<states.length; i++) {
 
 exports.states = states;
 
-exports.getStateAbbrev = function (stateName) {
+exports.getStateAbbrev = function (stateName, callback) {
   var stateNameLower = typeof stateName === 'string' ? stateName.toLowerCase() : undefined;
-  return stateAbbrevs[stateNameLower];
+  callback(stateAbbrevs[stateNameLower]);
 };
 
-exports.getStateName = function (stateAbbrev) {
+exports.getStateName = function (stateAbbrev, callback) {
   var stateAbbr = typeof stateAbbrev === 'string' ? stateAbbrev.toLowerCase() : undefined;
-  return stateNames[stateAbbr];
+  callback(stateNames[stateAbbr]);
 };
