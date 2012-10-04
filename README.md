@@ -14,13 +14,17 @@ Require madison:
   
     var madison = require('madison');
 
-Get a state's abbreviation:
+Get a state's abbreviation asynchronously:
 
-    madison.getStateAbbrev('virginia'); //returns 'VA'
+    madison.getStateAbbrev('virginia', function (abbrev) {
+      console.log(abbrev); //'VA'
+    }); 
 
-Get a state's name:
+Get a state's name asynchronously:
 
-    madison.getStateName('va'); //returns 'Virginia'
+    madison.getStateName('va', function (name) {
+      console.log(name); //'Virginia'
+    });
 
 Get a JSON array of US states, each containing 'name' and 'abbr' properties:
 
