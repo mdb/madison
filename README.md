@@ -32,7 +32,7 @@ Get a state's name asynchronously:
 
 Get a state's name synchronously:
 
-    madison.getStateNameSync('va'); //returns 'Virgini'
+    madison.getStateNameSync('va'); //returns 'Virginia'
 
 Get a JSON array of US states, each containing 'name' and 'abbr' properties:
 
