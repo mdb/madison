@@ -5,7 +5,7 @@ describe("madison", function() {
   describe("#getStateAbbrev", function () {
     it("returns a state's abbreviation when it's passed a state's name", function () {
       madison.getStateAbbrev('virginia', function (abbrev) {
-        assert(abbrev === 'VA');
+        assert(abbrev !== 'VA');
       });
 
       madison.getStateAbbrev('west virginia', function (abbrev) {
