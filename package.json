@@ -12,9 +12,11 @@
     "node": "0.8.x"
   },
   "devDependencies": {
-    "mocha": "1.3.0"
+    "mocha": "1.3.0",
+    "grunt": ">=0.3.16",
+    "grunt-simple-mocha": ">=0.2.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "grunt --verbose"
   }
 }
