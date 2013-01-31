@@ -1,5 +1,5 @@
 var assert = require('assert');
-var madison = require('../madison.js');
+var madison = require('../lib/madison.js');
 
 describe("madison", function() {
   describe("#getStateAbbrev", function () {
