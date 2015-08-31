@@ -202,5 +202,13 @@
   {
     "name": "Wyoming",
     "abbr": "WY"
+  },
+  {
+    "name": "Virgin Islands",
+    "abbr": "VI"
+  },
+  {
+    "name": "Puerto Rico",
+    "abbr": "PR"
   }
 ]
