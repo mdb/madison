@@ -25,7 +25,7 @@ describe("madison", function() {
       madison.getStateAbbrev('West virginia', function (abbrev) {
         assert(abbrev === 'WV');
       });
-      
+
       madison.getStateAbbrev('californIA', function (abbrev) {
         assert(abbrev === 'CA');
       });
@@ -40,12 +40,12 @@ describe("madison", function() {
         assert(abbrev === undefined);
       });
     });
-    
+
     it("returns undefined in the event that it is passed a non-string value", function () {
       madison.getStateAbbrev(undefined, function(abbrev) {
         assert(abbrev === undefined);
       });
-      
+
       madison.getStateAbbrev(false, function (abbrev) {
          assert(abbrev === undefined);
       });
@@ -57,11 +57,11 @@ describe("madison", function() {
       madison.getStateAbbrev({}, function (abbrev) {
         assert(abbrev === undefined);
       });
-      
+
       madison.getStateAbbrev(null, function (abbrev) {
         assert(abbrev === undefined);
       });
-      
+
       madison.getStateAbbrev([], function (abbrev) {
         assert (abbrev === undefined);
       });
@@ -85,7 +85,7 @@ describe("madison", function() {
       assert(madison.getStateAbbrevSync('Some Fake State') === undefined);
       assert(madison.getStateAbbrevSync('Another Fake State') === undefined);
     });
-    
+
     it("returns undefined in the event that it is passed a non-string value", function () {
       assert(madison.getStateAbbrevSync(undefined) === undefined);
       assert(madison.getStateAbbrevSync(false) === undefined);
@@ -106,7 +106,7 @@ describe("madison", function() {
         assert(name === 'California');
       });
     });
-    
+
     it("returns a state's name when it's passed a state's abbreviation, independent of case", function () {
       madison.getStateName('VA', function (name) {
         assert(name === 'Virginia');
@@ -159,7 +159,7 @@ describe("madison", function() {
       assert(madison.getStateNameSync('va') === 'Virginia');
       assert(madison.getStateNameSync('ca') === 'California');
     });
-    
+
     it("returns a state's name when it's passed a state's abbreviation, independent of case", function () {
       assert(madison.getStateNameSync('VA') === 'Virginia');
       assert(madison.getStateNameSync('cA') === 'California');
@@ -182,7 +182,7 @@ describe("madison", function() {
 
   describe("#states", function () {
     it("returns a JSON array of objects, each of which contains a 'name' and 'abbr' key", function () {
-      assert(madison.states.length === 51);
+      assert(madison.states.length === 53);
       assert(madison.states[0].name === "Alabama");
       assert(madison.states[0].abbr === "AL");
     });
