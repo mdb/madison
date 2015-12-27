@@ -2,15 +2,15 @@
   "name": "madison",
   "description": "A dirt simple utility for working with US state names and abbreviations.",
   "author": "Mike Ball <mikedball@gmail.com>",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "main": "lib/madison",
   "repository": {
     "type": "git",
     "url": "http://github.com/mdb/madison.git"
   },
   "engines": {
-    "node": ">=0.12",
-    "npm": ">=2.7"
+    "node": ">=0.10",
+    "npm": ">=2"
   },
   "devDependencies": {
     "mocha": "*",
