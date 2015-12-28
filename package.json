@@ -19,6 +19,7 @@
     "grunt-contrib-jshint": "0.11.2",
     "grunt-cli": "0.1.13"
   },
+  "license": "MIT",
   "scripts": {
     "test": "grunt --verbose"
   }
