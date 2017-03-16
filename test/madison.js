@@ -182,7 +182,7 @@ describe("madison", function() {
 
   describe("#states", function () {
     it("returns a JSON array of objects, each of which contains a 'name' and 'abbr' key", function () {
-      assert(madison.states.length === 53);
+      assert(madison.states.length === 66);
       assert(madison.states[0].name === "Alabama");
       assert(madison.states[0].abbr === "AL");
     });
