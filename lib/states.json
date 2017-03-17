@@ -210,5 +210,58 @@
   {
     "name": "Puerto Rico",
     "abbr": "PR"
+  },
+  {
+    "name": "Alberta",
+    "abbr": "AB"
+  },
+
+  {
+    "name": "British Columbia",
+    "abbr": "BC"
+  },
+  {
+    "name": "Manitoba",
+    "abbr": "MB"
+  },
+  {
+    "name": "New Brunswick",
+    "abbr": "NB"
+  },
+  {
+    "name": "Newfoundland and Labrador",
+    "abbr": "NL"
+  },
+  {
+    "name": "Nova Scotia",
+    "abbr": "NS"
+  },
+  {
+    "name": "Northwest Territories",
+    "abbr": "NT"
+  },
+  {
+    "name": "Nunavut",
+    "abbr": "NU"
+  },
+  {
+    "name": "Ontario",
+    "abbr": "ON"
+  },
+  {
+    "name": "Prince Edward Island",
+    "abbr": "PE"
+  },
+  {
+    "name": "Quebec",
+    "abbr": "QC"
+  },
+  {
+    "name": "Saskatchewan",
+    "abbr": "SK"
+  },
+  {
+    "name": "Yukon",
+    "abbr": "YT"
   }
 ]

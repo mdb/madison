@@ -2,7 +2,7 @@
   "name": "madison",
   "description": "A dirt simple utility for working with US state names and abbreviations.",
   "author": "Mike Ball <mikedball@gmail.com>",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/madison",
   "repository": {
     "type": "git",
