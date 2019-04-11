@@ -4,36 +4,21 @@
 
 A dirt simple Node.js module for working with US state names and abbreviations.
 
-## Installation
+## Usage
 
-    npm install madison
+```javascript
+const madison = require('madison');
 
-## Getting Started
+// Get a state's abbreviation
+console.log(madison.getStateAbbrev('virginia')); // 'VA'
+console.log(madison.getStateAbbrev('vIrgiNia')); // 'VA'
+console.log(madison.getStateAbbrev('foo')); // undefined
 
-Require madison:
+// Get a state's name
+console.log(madison.getStateName('va')); // 'Virginia'
+console.log(madison.getStateName('vA')); // 'Virginia'
+console.log(madison.getStateName('foo')); // undefined
 
-    var madison = require('madison');
-
-Get a state's abbreviation asynchronously:
-
-    madison.getStateAbbrev('virginia', function (abbrev) {
-      console.log(abbrev); //'VA'
-    });
-
-Get a state's abbreviation synchronously:
-
-    madison.getStateAbbrevSync('virginia'); //returns 'VA'
-
-Get a state's name asynchronously:
-
-    madison.getStateName('va', function (name) {
-      console.log(name); //'Virginia'
-    });
-
-Get a state's name synchronously:
-
-    madison.getStateNameSync('va'); //returns 'Virginia'
-
-Get a JSON array of US states, each containing 'name' and 'abbr' properties:
-
-    madison.states;
+// Get a JSON array of US states, each containing 'name' and 'abbr' properties:
+madison.states;
+```
