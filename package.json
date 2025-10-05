@@ -1,6 +1,6 @@
 {
   "name": "madison",
-  "description": "A dirt simple utility for working with US state names and abbreviations.",
+  "description": "A minimal utility for working with US state names and abbreviations.",
   "author": "Mike Ball <mikedball@gmail.com>",
   "version": "2.0.1",
   "main": "lib/madison",
