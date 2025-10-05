@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/mdb/madison.svg?branch=master)](https://travis-ci.org/mdb/madison)
+[![cicd](https://github.com/mdb/madison/actions/workflows/cicd.yaml/badge.svg)](https://github.com/mdb/madison/actions/workflows/cicd.yaml)
 
 # madison
 
-A dirt simple Node.js module for working with US state names and abbreviations.
+A minimal Node.js module for working with US state names and abbreviations.
 
 ## Usage
 
