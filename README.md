@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/mdb/madison.svg?branch=master)](https://travis-ci.org/mdb/madison)
+[![cicd](https://github.com/mdb/madison/actions/workflows/cicd.yaml/badge.svg)](https://github.com/mdb/madison/actions/workflows/cicd.yaml)
 
 # madison
 
-A dirt simple Node.js module for working with US state names and abbreviations.
+A minimal Node.js module for working with US state names and abbreviations.
 
 ## Usage
 
@@ -22,9 +22,3 @@ console.log(madison.getStateName('foo')); // undefined
 // Get a JSON array of US states, each containing 'name' and 'abbr' properties:
 madison.states;
 ```
-
-## Version 2.0.0 Breaking Changes
-
-`*Sync` methods have been renamed to no longer have the `Sync` suffix, and async method versions have been removed to simplify the API, as no asyncronous calls were truly necessary.
-
-All previously async methods now simply return a value synchronously, and do not accept a callback argument (it will be ignored if passed). All usages of previously synchronous methods can be upgraded by simply removing the `*Sync` suffix and will continue to work the same.
