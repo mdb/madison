@@ -9,7 +9,7 @@
     "url": "http://github.com/mdb/madison.git"
   },
   "devDependencies": {
-    "mocha": "10.2.0",
+    "mocha": "11.7.4",
     "eslint": "9.37.0"
   },
   "license": "MIT",
