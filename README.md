@@ -1,4 +1,4 @@
-[![cicd](https://github.com/mdb/madison/actions/workflows/cicd.yaml/badge.svg)](https://github.com/mdb/madison/actions/workflows/cicd.yaml)
+[![cicd](https://github.com/mdb/madison/actions/workflows/cicd.yaml/badge.svg?branch=master)](https://github.com/mdb/madison/actions/workflows/cicd.yaml)
 
 # madison
 
