@@ -4,6 +4,8 @@ name: cicd
 on:
   pull_request:
   push:
+    branches:
+      - master
 
 jobs:
   test:
@@ -44,7 +46,7 @@ jobs:
         with:
           tag: ${{ env.PACKAGE_VERSION }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          skip-pattern: '[skip release]'
+          skip-pattern: '[skip validate-version]'
           commit-message: '${{ env.COMMIT_MESSAGE }}'
 
   release:
